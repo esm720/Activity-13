@@ -189,7 +189,7 @@
             this.Controls.Add(this.TMLabel);
             this.Controls.Add(this.TLLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tic Tac Toe";
             this.ResumeLayout(false);
 
         }

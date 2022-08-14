@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace Activity_13
 {
+    /*
+     * Enrique Sanchezmurillo
+     * CST150, Activity 13
+     * 14 August 2022
+     */
     public partial class Form1 : Form
     {
 
@@ -21,19 +26,20 @@ namespace Activity_13
 
         private int randGen()
         {
+            //using random method to generate random number
             return random.Next(0,2);
         }
 
         private void NewGameButton_Click(object sender, EventArgs e)
         {
           ResultLabel.Text = " ";
-
+            //Create variables for the array
           int ROW = 3;
           int COL = 3;
           int[,] ticTacArray = new int[ROW, COL];
           string[,] ticTacDisplayArray = new string[ROW, COL]; 
          
-
+            //Use a for loop to inspect the array and assign the X or O strings based on number
             for(int row = 0; row < ROW; row++)
             {
                 for(int col = 0; col < COL; col++)
@@ -49,7 +55,7 @@ namespace Activity_13
                     }
                 }
             }
-
+            //Display array to labels
             TLLabel.Text = ticTacDisplayArray[0, 0];
             TMLabel.Text = ticTacDisplayArray[0, 1];
             TRLabel.Text = ticTacDisplayArray[0, 2];
@@ -59,7 +65,7 @@ namespace Activity_13
             BLLabel.Text = ticTacDisplayArray[2, 0];
             BMLabel.Text = ticTacDisplayArray[2, 1];
             BRLabel.Text = ticTacDisplayArray[2, 2];
-
+            //Use checkWinMethod to determine who won the game
             checkWin();
         }
 
